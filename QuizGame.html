@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Quiz Generator</title>
+			<script>
+			let game = {
+				questions: {
+						qText: "Is Fortnite Good?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'No'
+					},
+					
+						qText: "Is Fortnite Bad?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'Yes'
+					
+					},
+					
+						qText: "Should Fortnite be iced on the shelf?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'Yes'
+					}
+				},
+				createQuestion: function () {
+					document.getElementByID("awnserBox").innerHTML = "";
+					let RNGesus = Math.floor(Math.random() * 3);
+					document.getElementByID("questionBox").innerHTML = game.questions[RNGesus].qText;
+					for (let i = 0; i < game.questions[RNGesus].aList.length; i++) {
+						document.getElementById("answerBox").innerHTML +=
+						<input type="radio" id="answer${i}" name="selection" value="${game.questions{RNGesus}.aList{1})">
+						<label for="${game.questions{RNGesus}.aList{1})">${game.questions{RNGesus}.aList{1})</label>
+				},
+				checkAnswer: function () {
+				
+				}
+			}
+		</script>
+	</head>
+	<body onload="">
+		<div id="QuestionBox">
+		</div>
+		<div id="answerBox">
+		</div>
+		<div id="responseBox">
+		</div>
+		<button id="submit" onclick="">Submit Answer</button>
+	</body>
+</html>
